@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-09 03:57:00 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMDk7IjAzOjU0OjE2ICI7Mjc2OQ=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMDk7IjAzOjU3OjAwICI7MTsyODcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I, J, R" type="Integer" array="False" size=""/>
+            <assign variable="R" expression="0"/>
+            <for variable="I" start="1" end="5" direction="inc" step="1">
+                <for variable="J" start="1" end="3" direction="inc" step="1">
+                    <assign variable="R" expression="R+1"/>
+                </for>
+            </for>
+            <output expression="&quot;Il valore di R &#233;: &quot; &amp; R" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

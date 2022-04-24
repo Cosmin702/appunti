@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-23 11:05:36 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDEtMTk7IjA2OjM0OjQ1ICI7Mjc3Mg=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDEtMjM7IjExOjA1OjM2ICI7MjsyODcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, x" type="Real" array="False" size=""/>
+            <output expression="&quot;Inserisci a: &quot;" newline="True"/>
+            <input variable="a"/>
+            <if expression="a=0">
+                <then>
+                    <output expression="&quot;L'equazione sar&#224; impossibile&quot;" newline="True"/>
+                    <breakpoint/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Inserisci b: &quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;a*x=b  ----&gt;  &quot; &amp; a &amp; &quot;*&quot; &amp; &quot;x&quot; &amp;  &quot; = &quot; &amp; b" newline="True"/>
+            <assign variable="b" expression="b/a"/>
+            <output expression="&quot;Semplifico &quot; &amp; &quot;x&quot; &amp; &quot; = &quot; &amp; b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

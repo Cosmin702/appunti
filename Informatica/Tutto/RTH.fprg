@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-22 06:23:05 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMjI7IjAzOjIzOjA0ICI7Mjc1OA=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMjI7IjA2OjIzOjA1ICI7MzsyODcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I, NCARATTERI, X, C, N, Y" type="Integer" array="False" size=""/>
+            <declare name="ALFABETO, CHIAVE" type="String" array="True" size="26"/>
+            <call expression="Alfabeto(ALFABETO)"/>
+            <output expression="&quot;Vuoi criptare o decriptare il messaggio? (Criptare=1 , Decriptare=0)&quot;" newline="True"/>
+            <input variable="X"/>
+            <output expression="&quot;Quante volte vuoi farlo?&quot;" newline="True"/>
+            <input variable="N"/>
+            <output expression="&quot;Inserisci quanti caratteri contiene la frase escludendo gli spazi.&quot;" newline="True"/>
+            <input variable="NCARATTERI"/>
+            <declare name="FRASE" type="String" array="True" size="NCARATTERI"/>
+            <for variable="I" start="0" end="25" direction="inc" step="1">
+                <output expression="&quot;Inserisci la &quot; &amp; i &amp; &quot; lettera della chiave.&quot;" newline="True"/>
+                <input variable="CHIAVE[I]"/>
+            </for>
+            <for variable="I" start="0" end="NCARATTERI-1" direction="inc" step="1">
+                <output expression="&quot;Inserisci la &quot; &amp; i &amp; &quot; lettera della parola.&quot;" newline="True"/>
+                <input variable="FRASE[I]"/>
+            </for>
+            <for variable="Y" start="1" end="N" direction="inc" step="1">
+                <for variable="I" start="0" end="NCARATTERI-1" direction="inc" step="1">
+                    <for variable="C" start="0" end="25" direction="inc" step="1">
+                        <if expression="X=0">
+                            <then>
+                                <if expression="CHIAVE[C]=FRASE[I]">
+                                    <then>
+                                        <assign variable="FRASE[I]" expression="ALFABETO[C]"/>
+                                        <assign variable="C" expression="25"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="ALFABETO[C]=FRASE[I]">
+                                    <then>
+                                        <assign variable="FRASE[I]" expression="CHIAVE[C]"/>
+                                        <assign variable="C" expression="25"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </for>
+                </for>
+            </for>
+            <output expression="&quot;Il risultato &#233;:&quot;" newline="True"/>
+            <for variable="I" start="0" end="NCARATTERI-1" direction="inc" step="1">
+                <output expression="FRASE[I]" newline="False"/>
+            </for>
+        </body>
+    </function>
+    <function name="Alfabeto" type="None" variable="ALFABETO">
+        <parameters>
+            <parameter name="ALFABETO" type="String" array="True"/>
+        </parameters>
+        <body>
+            <assign variable="ALFABETO[0]" expression="&quot;A&quot;"/>
+            <assign variable="ALFABETO[1]" expression="&quot;B&quot;"/>
+            <assign variable="ALFABETO[2]" expression="&quot;C&quot;"/>
+            <assign variable="ALFABETO[3]" expression="&quot;D&quot;"/>
+            <assign variable="ALFABETO[4]" expression="&quot;E&quot;"/>
+            <assign variable="ALFABETO[5]" expression="&quot;F&quot;"/>
+            <assign variable="ALFABETO[6]" expression="&quot;G&quot;"/>
+            <assign variable="ALFABETO[7]" expression="&quot;H&quot;"/>
+            <assign variable="ALFABETO[8]" expression="&quot;I&quot;"/>
+            <assign variable="ALFABETO[9]" expression="&quot;J&quot;"/>
+            <assign variable="ALFABETO[10]" expression="&quot;K&quot;"/>
+            <assign variable="ALFABETO[11]" expression="&quot;L&quot;"/>
+            <assign variable="ALFABETO[12]" expression="&quot;M&quot;"/>
+            <assign variable="ALFABETO[13]" expression="&quot;N&quot;"/>
+            <assign variable="ALFABETO[14]" expression="&quot;O&quot;"/>
+            <assign variable="ALFABETO[15]" expression="&quot;P&quot;"/>
+            <assign variable="ALFABETO[16]" expression="&quot;Q&quot;"/>
+            <assign variable="ALFABETO[17]" expression="&quot;R&quot;"/>
+            <assign variable="ALFABETO[18]" expression="&quot;S&quot;"/>
+            <assign variable="ALFABETO[19]" expression="&quot;T&quot;"/>
+            <assign variable="ALFABETO[20]" expression="&quot;U&quot;"/>
+            <assign variable="ALFABETO[21]" expression="&quot;V&quot;"/>
+            <assign variable="ALFABETO[22]" expression="&quot;W&quot;"/>
+            <assign variable="ALFABETO[23]" expression="&quot;X&quot;"/>
+            <assign variable="ALFABETO[24]" expression="&quot;Y&quot;"/>
+            <assign variable="ALFABETO[25]" expression="&quot;Z&quot;"/>
+        </body>
+    </function>
+</flowgorithm>

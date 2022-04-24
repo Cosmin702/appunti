@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tec_Inf_01"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-21 11:41:46 "/>
+        <attribute name="created" value="VGVjX0luZl8wMTtERVNLVE9QLUNBVFRFRFI7MjAyMi0wMy0yMTsiMTA6NTk6MTAgIjszMTQx"/>
+        <attribute name="edited" value="VGVjX0luZl8wMTtERVNLVE9QLUNBVFRFRFI7MjAyMi0wMy0yMTsiMTE6NDE6NDYgIjs1OzMyNTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="X, Y, Ncom, i" type="Integer" array="False" size=""/>
+            <declare name="DIR" type="String" array="False" size=""/>
+            <output expression="&quot;Inserisci la coordinata X: &quot;" newline="True"/>
+            <input variable="X"/>
+            <output expression="&quot;Inserisci la coordinata Y: &quot;" newline="True"/>
+            <input variable="Y"/>
+            <output expression="&quot;Inserisci l'orientamento iniziale: &quot;" newline="True"/>
+            <input variable="DIR"/>
+            <output expression="&quot;Quanti comandi devi inserire?: &quot;" newline="True"/>
+            <input variable="Ncom"/>
+            <declare name="com" type="String" array="True" size="Ncom"/>
+            <for variable="i" start="0" end="Ncom-1" direction="inc" step="1">
+                <output expression="&quot;Inserisci il &quot; &amp; i+1 &amp; &quot;&#176; comando:&quot;" newline="True"/>
+                <input variable="com[i]"/>
+            </for>
+            <for variable="i" start="0" end="Ncom-1" direction="inc" step="1">
+                <if expression="com[i]=&quot;a&quot;">
+                    <then>
+                        <if expression="DIR=&quot;S&quot;">
+                            <then>
+                                <assign variable="DIR" expression="&quot;E&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="DIR=&quot;N&quot;">
+                                    <then>
+                                        <assign variable="DIR" expression="&quot;W&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="DIR=&quot;E&quot;">
+                                            <then>
+                                                <assign variable="DIR" expression="&quot;N&quot;"/>
+                                            </then>
+                                            <else>
+                                                <if expression="DIR=&quot;W&quot;">
+                                                    <then>
+                                                        <assign variable="DIR" expression="&quot;S&quot;"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="com[i]=&quot;o&quot;">
+                    <then>
+                        <if expression="DIR=&quot;S&quot;">
+                            <then>
+                                <assign variable="DIR" expression="&quot;W&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="DIR=&quot;N&quot;">
+                                    <then>
+                                        <assign variable="DIR" expression="&quot;E&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="DIR=&quot;E&quot;">
+                                            <then>
+                                                <assign variable="DIR" expression="&quot;S&quot;"/>
+                                            </then>
+                                            <else>
+                                                <if expression="DIR=&quot;W&quot;">
+                                                    <then>
+                                                        <assign variable="DIR" expression="&quot;N&quot;"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="com[i]=&quot;f&quot; AND DIR=&quot;S&quot;">
+                    <then>
+                        <assign variable="Y" expression="Y-1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="com[i]=&quot;f&quot; AND DIR=&quot;W&quot;">
+                    <then>
+                        <assign variable="X" expression="X-1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="com[i]=&quot;f&quot; AND DIR=&quot;E&quot;">
+                    <then>
+                        <assign variable="X" expression="X+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="com[i]=&quot;f&quot; AND DIR=&quot;N&quot;">
+                    <then>
+                        <assign variable="Y" expression="Y+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Dopo le movimentazioni del robot ho ottenuto la seguente posizione e orientamento ascisse: &quot; &amp; X &amp; &quot;, ordinate &quot; &amp; Y &amp; &quot;, orientamento &quot; &amp; DIR" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

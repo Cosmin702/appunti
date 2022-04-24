@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-22 08:38:06 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMjI7IjA3OjU0OjAwICI7Mjc2Mg=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMjI7IjA4OjAxOjE4ICI7MTthbWVsaTtERVNLVE9QLUJSNUlPMUk7MjAyMi0wMy0yMjsiMDM6MjM6MDQgIjtDUklUVE9HUkFGSUEuZnByZzs3MTIw"/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMjI7IjA4OjM4OjA2ICI7MTsyODc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I, C, A, B" type="Integer" array="False" size=""/>
+            <declare name="CHIAVE, ALFABETO, FRASETEMP, FRASE" type="String" array="False" size=""/>
+            <assign variable="ALFABETO" expression="&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;"/>
+            <assign variable="FRASE" expression="&quot;&quot;"/>
+            <assign variable="A" expression="0"/>
+            <output expression="&quot;Inserisci la chiave di decriptazione&quot;" newline="True"/>
+            <input variable="CHIAVE"/>
+            <assign variable="CHIAVE" expression="CHIAVE&amp;CHIAVE&amp;CHIAVE&amp;CHIAVE&amp;CHIAVE&amp;CHIAVE&amp;CHIAVE&amp;CHIAVE&amp;CHIAVE&amp;CHIAVE&amp;CHIAVE"/>
+            <output expression="&quot;Inserisci la frase da criptare senza gli spazi:&quot;" newline="True"/>
+            <input variable="FRASETEMP"/>
+            <for variable="I" start="0" end="len(FRASETEMP)-1" direction="inc" step="1">
+                <for variable="C" start="0" end="len(ALFABETO)-1" direction="inc" step="1">
+                    <if expression="char(FRASETEMP,I)=char(ALFABETO,C)">
+                        <then>
+                            <for variable="A" start="0" end="len(ALFABETO)-1" direction="inc" step="1">
+                                <if expression="char(CHIAVE,I)=char(ALFABETO,A)">
+                                    <then>
+                                        <assign variable="C" expression="C+A"/>
+                                        <assign variable="A" expression="len(ALFABETO)-1"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </for>
+                            <assign variable="FRASE" expression="char(ALFABETO,C) &amp; FRASE"/>
+                            <assign variable="C" expression="len(ALFABETO)-1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

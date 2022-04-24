@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-18 07:24:00 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDEtMTg7IjA2OjQ1OjEwICI7Mjc2NQ=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDEtMTg7IjA3OjI0OjAwICI7MTsyODcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, ar, br" type="Integer" array="False" size=""/>
+            <comment text="ar e br sono i resti delle divisioni"/>
+            <output expression="&quot;Inserisci il primo numero&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Inserisci il secondo numero&quot;" newline="True"/>
+            <input variable="b"/>
+            <if expression="a=b">
+                <then>
+                    <output expression="&quot;I due numeri sono uguali&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="a&lt;b">
+                        <then>
+                            <output expression="&quot;Il numero pi&#249; piccolo &#232;: &quot; &amp; a" newline="True"/>
+                            <output expression="&quot;Il numero pi&#249; grande &#232;: &quot; &amp; b" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Il numero pi&#249; piccolo &#232;: &quot; &amp; b" newline="True"/>
+                            <output expression="&quot;Il numero pi&#249; grande &#232;: &quot; &amp; a" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="ar" expression="a mod 2"/>
+            <assign variable="br" expression="b mod 2"/>
+            <if expression="ar=0">
+                <then>
+                    <output expression="&quot;Il primo numero, &quot; &amp; a &amp; &quot; &#232; pari.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Il primo numero, &quot; &amp; a &amp; &quot; &#232; dispari.&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="br=0">
+                <then>
+                    <output expression="&quot;Il secondo numero, &quot; &amp; b &amp; &quot; &#232; pari.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Il secondo numero, &quot; &amp; b &amp; &quot; &#232; dispari.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-19 07:24:40 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMTk7IjA2OjUzOjQ5ICI7Mjc3OA=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMTk7IjA3OjI0OjQwICI7MTsyODc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="FRASE, CHIAVE, DECRIPTATO, ALFA" type="String" array="False" size=""/>
+            <assign variable="ALFA" expression="ABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
+            <declare name="I, LUNG, C" type="Integer" array="False" size=""/>
+            <assign variable="LUNG" expression="len(FRASE)"/>
+            <for variable="C" start="0" end="LUNG" direction="inc" step="1">
+                <for variable="I" start="0" end="25" direction="inc" step="1">
+                    <if expression="char(CHIAVE,I) = char(FRASE,C)">
+                        <then>
+                            <assign variable="DECRIPTATO" expression="DECRIPTATO &amp; char(FRASE,I)"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

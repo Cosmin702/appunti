@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-09 04:56:29 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMDk7IjA0OjAxOjMyICI7Mjc2MA=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMDk7IjA0OjU2OjI5ICI7MTsyODg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="FREQ, P" type="Integer" array="False" size=""/>
+            <declare name="TESTO, LETT" type="String" array="False" size=""/>
+            <output expression="&quot;Inserisci la frase, tutta in caratteri minuscoli&quot;" newline="True"/>
+            <input variable="TESTO"/>
+            <output expression="&quot;Insderisci la lettera minuscola da trovare&quot;" newline="True"/>
+            <input variable="LETT"/>
+            <assign variable="FREQ" expression="0"/>
+            <for variable="P" start="0" end="Len(TESTO)-1" direction="inc" step="1">
+                <if expression="LETT=char(TESTO,P)">
+                    <then>
+                        <assign variable="FREQ" expression="FREQ+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;La lettera &quot; &amp; LETT &amp; &quot; &#232; stata trovata &quot; &amp; FREQ &amp; &quot; volte&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

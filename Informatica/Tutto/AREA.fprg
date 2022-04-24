@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-20 09:13:43 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDQtMjA7IjA1OjU2OjEzICI7Mjc2NQ=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDQtMjA7IjA5OjEzOjQzICI7NTsyODc3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="L, D, AREAL, AREAD, BASETRI" type="Real" array="False" size=""/>
+            <output expression="&quot;Inserisci il numero L&quot;" newline="True"/>
+            <input variable="L"/>
+            <output expression="&quot;Inserisci il numero D&quot;" newline="True"/>
+            <input variable="D"/>
+            <assign variable="AREAL" expression="L^2-(pi*(L/2)^2)"/>
+            <assign variable="BASETRI" expression="(sqrt((D/2)^2-(D/4)^2))*2"/>
+            <assign variable="AREAD" expression="(pi*(D/2)^2)-(BASETRI*D/4*3)/2"/>
+            <if expression="AREAD&gt;AREAL">
+                <then>
+                    <output expression="&quot;L'area rossa &#233; maggiore del area gialla: G=&quot; &amp; AREAL &amp; &quot;  R=&quot; &amp; AREAD" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;L'area gialla &#233; maggiore del area rossa: G=&quot; &amp; AREAL &amp; &quot;  R=&quot; &amp; AREAD" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-19 11:37:03 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjEtMTItMTU7IjA5OjA3OjIwICI7Mjc2NQ=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjEtMTItMTk7IjExOjM3OjAzICI7MjsyODc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Min, Max, X, N, XMin, XMax, NMedia, Somma, Y" type="Integer" array="False" size=""/>
+            <declare name="Media" type="Real" array="False" size=""/>
+            <assign variable="Y" expression="0"/>
+            <assign variable="Somma" expression="0"/>
+            <assign variable="Min" expression="100"/>
+            <assign variable="Max" expression="0"/>
+            <assign variable="n" expression="random(100)"/>
+            <output expression="&quot;Il tuo 1 numero &#232;: &quot; &amp; n" newline="True"/>
+            <assign variable="Min" expression="N"/>
+            <assign variable="Min" expression="N"/>
+            <output expression="&quot;Da che numero parte la media?&quot;" newline="True"/>
+            <input variable="NMedia"/>
+            <for variable="X" start="2" end="100" direction="inc" step="1">
+                <assign variable="N" expression="random(100)"/>
+                <output expression="&quot;Il tuo &quot; &amp; X" newline="False"/>
+                <output expression="&quot; numero &#233;: &quot; &amp; N" newline="True"/>
+                <if expression="X &gt;= NMedia AND Y &lt;= 10">
+                    <then>
+                        <assign variable="Y" expression="Y+1"/>
+                        <assign variable="Somma" expression="Somma+N"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="Max &gt; N">
+                    <then/>
+                    <else>
+                        <assign variable="Max" expression="N"/>
+                        <assign variable="XMax" expression="X"/>
+                    </else>
+                </if>
+                <if expression="Min &gt; N">
+                    <then>
+                        <assign variable="Min" expression="N"/>
+                        <assign variable="XMin" expression="X"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="Media" expression="Somma/10"/>
+            <output expression="&quot;Il numero maggiore &#232; &quot; &amp; Max" newline="False"/>
+            <output expression="&quot; ed &#232; il &quot; &amp; XMax" newline="False"/>
+            <output expression="&quot; numero.&quot;" newline="True"/>
+            <output expression="&quot;Il numero minore &#232; &quot; &amp; Min" newline="False"/>
+            <output expression="&quot; ed &#232; il &quot; &amp; XMin" newline="False"/>
+            <output expression="&quot; numero.&quot;" newline="True"/>
+            <output expression="&quot;La tua media e somma di 10 numeri a partire dal &quot; &amp; NMedia" newline="False"/>
+            <output expression="&quot; &#232; rispettivamente: &quot; &amp; Media" newline="True"/>
+            <output expression="&quot; &quot; &amp; Somma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

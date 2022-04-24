@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-07 06:09:09 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMDc7IjA2OjA0OjMxICI7Mjc2Mw=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMDc7IjA2OjA5OjA5ICI7MTsyODgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I, J, Q, X, Y" type="Integer" array="False" size=""/>
+            <declare name="S" type="String" array="False" size=""/>
+            <input variable="X"/>
+            <input variable="Y"/>
+            <assign variable="S" expression="&quot;&quot;"/>
+            <for variable="I" start="1" end="X" direction="inc" step="1">
+                <for variable="J" start="1" end="Y" direction="inc" step="1">
+                    <assign variable="S" expression="S &amp; &quot;?&quot;"/>
+                </for>
+            </for>
+            <assign variable="Q" expression="len(S)"/>
+            <output expression="S" newline="True"/>
+            <output expression="Q" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-12 09:43:34 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMTI7IjA5OjM3OjM1ICI7Mjc3MQ=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMTI7IjA5OjQzOjM0ICI7MTsyODc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I" type="Integer" array="False" size=""/>
+            <declare name="S, STRINV" type="String" array="False" size=""/>
+            <output expression="&quot;Inserisci una frase:&quot;" newline="True"/>
+            <input variable="S"/>
+            <assign variable="STRINV" expression="&quot;&quot;"/>
+            <for variable="I" start="0" end="len(S)-1" direction="inc" step="1">
+                <assign variable="STRINV" expression="char(S,I) &amp; STRINV"/>
+            </for>
+            <output expression="&quot;La frase al contrario &#233; : &quot; &amp; STRINV" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

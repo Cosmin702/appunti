@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tec_Inf_01"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-22 09:50:42 "/>
+        <attribute name="created" value="VGVjX0luZl8wMTtERVNLVE9QLThPRUk5MTQ7MjAyMS0xMi0yMjsiMDk6MDc6NDcgIjszMDY4"/>
+        <attribute name="edited" value="VGVjX0luZl8wMTtERVNLVE9QLThPRUk5MTQ7MjAyMS0xMi0yMjsiMDk6NTA6NDIgIjsxOzMxNjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I, Max, Min, Somma, N" type="Integer" array="False" size=""/>
+            <assign variable="Max" expression="0"/>
+            <assign variable="Min" expression="100"/>
+            <assign variable="Somma" expression="0"/>
+            <assign variable="n" expression="0"/>
+            <declare name="Media" type="Real" array="False" size=""/>
+            <for variable="I" start="1" end="5" direction="inc" step="1">
+                <output expression="&quot;Inserisci il tuo numero: &quot;" newline="True"/>
+                <input variable="N"/>
+                <assign variable="Somma" expression="Somma+N"/>
+                <if expression="N &lt; Min">
+                    <then>
+                        <assign variable="Min" expression="N"/>
+                    </then>
+                    <else>
+                        <if expression="N &gt; Max">
+                            <then>
+                                <assign variable="Max" expression="N"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <assign variable="Media" expression="Somma/5"/>
+            <output expression="&quot;La tua media &#232;: &quot; &amp; Media" newline="True"/>
+            <output expression="&quot;La somma &#232;: &quot; &amp; Somma" newline="True"/>
+            <output expression="&quot;Il numero minimo e massimo sono rispettivamente: &quot; &amp; Min &amp; &quot; e &quot; &amp; Max" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-07 07:49:31 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMDc7IjA2OjA5OjIyICI7Mjc2OA=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMDc7IjA3OjQ5OjMxICI7MjsyODgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I, LA, LB" type="Integer" array="False" size=""/>
+            <declare name="A, B" type="String" array="False" size=""/>
+            <input variable="A"/>
+            <input variable="B"/>
+            <assign variable="I" expression="1"/>
+            <assign variable="LA" expression="len(A)"/>
+            <assign variable="Lb" expression="len(b)"/>
+            <while expression="char(B,I-1)&amp;char(B,I)&amp;char(B,I+1) != A">
+                <assign variable="I" expression="I+1"/>
+            </while>
+            <output expression="I" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

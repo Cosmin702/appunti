@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-25 06:39:33 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMjU7IjA2OjMyOjU4ICI7Mjc3Mg=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMjU7IjA2OjM5OjMzICI7MTsyODgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, S, Q, K, X, Y, Z" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <input variable="X"/>
+            <input variable="Y"/>
+            <input variable="Z"/>
+            <assign variable="S" expression="0"/>
+            <assign variable="Q" expression="0"/>
+            <for variable="K" start="1" end="N" direction="inc" step="1">
+                <assign variable="S" expression="S+X+5"/>
+                <assign variable="Q" expression="Q+Y-Z+1"/>
+            </for>
+            <output expression="S" newline="True"/>
+            <output expression="Q" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-19 07:05:44 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDEtMTk7IjA2OjQ0OjQyICI7Mjc3MA=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDEtMTk7IjA3OjA1OjQ0ICI7MTsyODc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, base, esp, calc" type="Real" array="False" size=""/>
+            <declare name="i, x" type="Integer" array="False" size=""/>
+            <input variable="num"/>
+            <input variable="base"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="x" expression="0"/>
+            <assign variable="calc" expression="1"/>
+            <while expression="x=0">
+                <assign variable="i" expression="i+1"/>
+                <assign variable="calc" expression="calc*base"/>
+                <if expression="calc=num">
+                    <then>
+                        <assign variable="x" expression="1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="calc&lt;=num">
+                    <then/>
+                    <else>
+                        <output expression="&quot;La base inserita non &#232; la base correta della potenza.&quot;" newline="True"/>
+                        <breakpoint/>
+                        <comment text="non credo che ci sia un modo per arresatre totalmente l'argoritmo, quindi sicuramente si finir&#224; con un errore se si continua"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;L'esponente di &quot; &amp; num &amp; &quot; con base &quot; &amp; base &amp; &quot; &#232;: &quot; &amp; i" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

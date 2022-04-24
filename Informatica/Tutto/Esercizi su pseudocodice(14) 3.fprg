@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-12 10:02:43 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMTI7IjA5OjQzOjM3ICI7Mjc3MA=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMTI7IjEwOjAyOjQzICI7MTsyODYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A, B, L, I" type="Integer" array="False" size=""/>
+            <declare name="PAROLE, P1, P2, P3" type="String" array="False" size=""/>
+            <input variable="PAROLE"/>
+            <assign variable="P1" expression="&quot;&quot;"/>
+            <assign variable="P2" expression="&quot;&quot;"/>
+            <assign variable="P3" expression="&quot;&quot;"/>
+            <assign variable="A" expression="1"/>
+            <assign variable="B" expression="1"/>
+            <assign variable="L" expression="len(PAROLE)"/>
+            <for variable="I" start="0" end="L-1" direction="inc" step="1">
+                <if expression="char(PAROLE,I) = &quot; &quot;">
+                    <then>
+                        <if expression="A=1">
+                            <then>
+                                <assign variable="A" expression="I+1"/>
+                            </then>
+                            <else>
+                                <assign variable="B" expression="I+1"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="I" start="0" end="A-1" direction="inc" step="1">
+                <assign variable="P1" expression="P1 &amp; char(PAROLE,I)"/>
+            </for>
+            <for variable="I" start="A+1" end="B-1" direction="inc" step="1">
+                <assign variable="P2" expression="P2 &amp; char(PAROLE,I)"/>
+            </for>
+            <for variable="I" start="B+1" end="L-1" direction="inc" step="1">
+                <assign variable="P3" expression="P3 &amp; char(PAROLE,I)"/>
+            </for>
+            <output expression="P1" newline="True"/>
+            <output expression="P2" newline="True"/>
+            <output expression="P3" newline="True"/>
+            <output expression="A" newline="True"/>
+            <output expression="B" newline="True"/>
+            <output expression="L" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

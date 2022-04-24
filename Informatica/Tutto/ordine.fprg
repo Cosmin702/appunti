@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tec_Inf_01"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-16 06:31:09 "/>
+        <attribute name="created" value="VGVjX0luZl8wMTtERVNLVE9QLThPRUk5MTQ7MjAyMi0wMy0xNjsiMDk6MzE6MDAgIjszMDU4"/>
+        <attribute name="edited" value="VGVjX0luZl8wMTtERVNLVE9QLThPRUk5MTQ7MjAyMi0wMy0xNjsiMDk6NTI6MzEgIjsxOzMxNzM="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMTY7IjA2OjMxOjA5ICI7MTsyODc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, num1, den1, numnum, y, c, z" type="Real" array="False" size=""/>
+            <input variable="numnum"/>
+            <declare name="x, x2" type="Real" array="True" size="numnum"/>
+            <for variable="i" start="0" end="numnum-1" direction="inc" step="1">
+                <input variable="num1"/>
+                <input variable="den1"/>
+                <assign variable="x[i]" expression="num1/den1"/>
+                <assign variable="x2[i]" expression="num1/den1"/>
+            </for>
+            <for variable="c" start="0" end="numnum-1" direction="inc" step="1">
+                <assign variable="y" expression="-1"/>
+                <for variable="i" start="0" end="numnum-1" direction="inc" step="1">
+                    <assign variable="y" expression="y+1"/>
+                    <if expression="x[c]&gt;x[y]">
+                        <then>
+                            <assign variable="z" expression="x[c]"/>
+                            <assign variable="x[c]" expression="x[y]"/>
+                            <assign variable="x[y]" expression="z"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <declare name="ordine" type="Integer" array="True" size="numnum"/>
+            <for variable="c" start="0" end="numnum-1" direction="inc" step="1">
+                <assign variable="y" expression="0"/>
+                <while expression="x2[c]!=x[y]">
+                    <assign variable="y" expression="y+1"/>
+                </while>
+                <assign variable="ordine[c]" expression="y"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

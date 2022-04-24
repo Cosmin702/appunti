@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-14 03:48:28 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjEtMTItMTQ7IjAzOjM3OjE5ICI7Mjc2OQ=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjEtMTItMTQ7IjAzOjQ4OjI4ICI7MTsyODc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a1" type="Integer" array="False" size=""/>
+            <declare name="a2" type="Integer" array="False" size=""/>
+            <declare name="a3" type="Integer" array="False" size=""/>
+            <declare name="a4" type="Integer" array="False" size=""/>
+            <declare name="a5" type="Integer" array="False" size=""/>
+            <declare name="a6" type="Integer" array="False" size=""/>
+            <declare name="a7" type="Integer" array="False" size=""/>
+            <declare name="a8" type="Integer" array="False" size=""/>
+            <declare name="a9" type="Integer" array="False" size=""/>
+            <declare name="a10" type="Integer" array="False" size=""/>
+            <declare name="Somma" type="Integer" array="False" size=""/>
+            <declare name="Media" type="Integer" array="False" size=""/>
+            <input variable="a1"/>
+            <input variable="a2"/>
+            <input variable="a3"/>
+            <input variable="a4"/>
+            <input variable="a5"/>
+            <input variable="a6"/>
+            <input variable="a7"/>
+            <input variable="a8"/>
+            <input variable="a9"/>
+            <input variable="a10"/>
+            <assign variable="Somma" expression="a1+a2+a3+a4+a5+a6+a7+a8+a9+a10"/>
+            <assign variable="Media" expression="Somma/10"/>
+            <output expression="&quot;La somma &#232;: &quot; &amp; Somma" newline="True"/>
+            <output expression="&quot;La media &#232;: &quot; &amp; Media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

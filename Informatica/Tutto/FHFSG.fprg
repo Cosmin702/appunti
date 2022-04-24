@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-25 06:32:52 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMjU7IjA1OjM3OjUxICI7Mjc2OQ=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMjU7IjA2OjMyOjUyICI7MTsyODc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, A, B, C, K, X, Y, Z, GIU, A1, B1, C1" type="Integer" array="False" size=""/>
+            <assign variable="A" expression="1"/>
+            <assign variable="B" expression="2"/>
+            <assign variable="C" expression="3"/>
+            <assign variable="N" expression="3"/>
+            <assign variable="x" expression="3"/>
+            <assign variable="y" expression="3"/>
+            <assign variable="z" expression="3"/>
+            <for variable="K" start="1" end="N" direction="inc" step="1">
+                <assign variable="C" expression="A+X"/>
+                <assign variable="A" expression="B+Y"/>
+                <assign variable="B" expression="C+Z"/>
+            </for>
+            <output expression="A" newline="True"/>
+            <output expression="B" newline="True"/>
+            <output expression="C" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

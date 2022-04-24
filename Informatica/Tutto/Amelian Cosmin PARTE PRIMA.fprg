@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-22 07:14:58 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjEtMTItMjI7IjA3OjAxOjUwICI7Mjc1OA=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjEtMTItMjI7IjA3OjE0OjU4ICI7MTsyODc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N1, N2, N3, Min, Max" type="Integer" array="False" size=""/>
+            <declare name="Media" type="Real" array="False" size=""/>
+            <assign variable="Min" expression="100"/>
+            <assign variable="Max" expression="0"/>
+            <output expression="&quot;Inserisci il primo numero: &quot;" newline="True"/>
+            <input variable="N1"/>
+            <output expression="&quot;Inserisci il secondo numero: &quot;" newline="True"/>
+            <input variable="N2"/>
+            <output expression="&quot;Inserisci il terzo numero: &quot;" newline="True"/>
+            <input variable="N3"/>
+            <if expression="N1 &lt; N2">
+                <then>
+                    <assign variable="Min" expression="N1"/>
+                </then>
+                <else>
+                    <assign variable="Max" expression="N1"/>
+                </else>
+            </if>
+            <if expression="N2 &lt; N1">
+                <then>
+                    <assign variable="Min" expression="N2"/>
+                </then>
+                <else>
+                    <assign variable="Max" expression="N2"/>
+                </else>
+            </if>
+            <if expression="N3 &lt; Min">
+                <then>
+                    <assign variable="Min" expression="N3"/>
+                </then>
+                <else>
+                    <assign variable="Max" expression="N3"/>
+                </else>
+            </if>
+            <assign variable="Media" expression="(N1+N2+N3)/3"/>
+            <output expression="&quot;Il numero minimo &#232;: &quot; &amp; Min" newline="True"/>
+            <output expression="&quot;Il numero massimo &#232;: &quot; &amp; Max" newline="True"/>
+            <output expression="&quot;La media &#232; : &quot; &amp; Media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

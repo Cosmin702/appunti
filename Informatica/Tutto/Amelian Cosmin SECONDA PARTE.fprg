@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-22 08:29:00 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjEtMTItMjI7IjA3OjE1OjAzICI7Mjc2MQ=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjEtMTItMjI7IjA4OjI5OjAwICI7MzsyODc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Somma, I, Min, Max, N" type="Integer" array="False" size=""/>
+            <declare name="Media" type="Real" array="False" size=""/>
+            <assign variable="Max" expression="0"/>
+            <assign variable="Min" expression="100"/>
+            <assign variable="N" expression="0"/>
+            <assign variable="Somma" expression="0"/>
+            <assign variable="Media" expression="0"/>
+            <for variable="I" start="1" end="3" direction="inc" step="1">
+                <output expression="&quot;Inserisci un numero&quot;" newline="True"/>
+                <input variable="N"/>
+                <assign variable="Somma" expression="Somma+N"/>
+                <if expression="N &lt; Min">
+                    <then>
+                        <assign variable="Min" expression="N"/>
+                    </then>
+                    <else>
+                        <if expression="N &gt; Max">
+                            <then>
+                                <assign variable="Max" expression="N"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <assign variable="Media" expression="Somma/3"/>
+            <output expression="&quot;Il tuo numero minimo &#232;: &quot; &amp; Min" newline="True"/>
+            <output expression="&quot;Il tuo numero massimo &#232;: &quot; &amp; Max" newline="True"/>
+            <output expression="&quot;La media &#232;: &quot; &amp; Media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

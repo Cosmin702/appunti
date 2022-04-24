@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-07 07:45:07 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMDc7IjA3OjI1OjEzICI7Mjc2Nw=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMDc7IjA3OjQ1OjA3ICI7MjsyODgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I, PM, X" type="Integer" array="False" size=""/>
+            <declare name="A, B, C, M, XM" type="String" array="False" size=""/>
+            <input variable="M"/>
+            <assign variable="A" expression="&quot;ABCDEFGHILMNOPQRSTUVZ&quot;"/>
+            <assign variable="B" expression="&quot;NQTIFMUOSZEDRVBGPHACL&quot;"/>
+            <assign variable="C" expression="&quot;&quot;"/>
+            <for variable="I" start="0" end="len(M)-1" direction="inc" step="1">
+                <for variable="X" start="0" end="len(A)-1" direction="inc" step="1">
+                    <assign variable="XM" expression="char(A,X)"/>
+                    <if expression="XM=char(M,I)">
+                        <then>
+                            <assign variable="PM" expression="X"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <assign variable="C" expression="C &amp; char(B,PM)"/>
+            </for>
+            <output expression="C" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

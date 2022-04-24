@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-09 04:01:29 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMDk7IjAzOjU3OjAzICI7Mjc2OA=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDItMDk7IjA0OjAxOjI5ICI7MTsyODc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="D1, D2, Q, R" type="Integer" array="False" size=""/>
+            <input variable="D1"/>
+            <input variable="D2"/>
+            <assign variable="Q" expression="0"/>
+            <assign variable="R" expression="D1"/>
+            <while expression="R&gt;=D2">
+                <assign variable="R" expression="R-D2"/>
+                <assign variable="Q" expression="Q+1"/>
+            </while>
+            <output expression="&quot;Il valore di Q &#233;: &quot; &amp; Q" newline="True"/>
+            <output expression="&quot;Il valore di R &#233;: &quot; &amp; R" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

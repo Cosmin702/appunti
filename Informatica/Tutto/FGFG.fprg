@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tec_Inf_01"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-23 09:25:02 "/>
+        <attribute name="created" value="VGVjX0luZl8wMTtERVNLVE9QLThPRUk5MTQ7MjAyMi0wMi0yMzsiMDk6MTA6MzkgIjszMDY0"/>
+        <attribute name="edited" value="VGVjX0luZl8wMTtERVNLVE9QLThPRUk5MTQ7MjAyMi0wMi0yMzsiMDk6MjU6MDIgIjsxOzMxNjg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, S, Q, K, X, Y" type="Integer" array="False" size=""/>
+            <assign variable="S" expression="0"/>
+            <assign variable="Q" expression="0"/>
+            <while expression="S!=18 AND Q!=32">
+                <assign variable="S" expression="0"/>
+                <assign variable="Q" expression="0"/>
+                <assign variable="N" expression="random(10)"/>
+                <assign variable="X" expression="random(10)"/>
+                <assign variable="Y" expression="random(10)"/>
+                <for variable="K" start="1" end="N" direction="inc" step="1">
+                    <assign variable="S" expression="S+K+X"/>
+                    <assign variable="Q" expression="Q+S-Y"/>
+                </for>
+                <if expression="S=18 AND Q=32">
+                    <then/>
+                    <else>
+                        <assign variable="Q" expression="0"/>
+                        <assign variable="S" expression="0"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="N" newline="True"/>
+            <output expression="X" newline="True"/>
+            <output expression="Y" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

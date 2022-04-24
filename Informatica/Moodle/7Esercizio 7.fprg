@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-23 11:02:31 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDEtMjM7IjEwOjQxOjQ5ICI7Mjc2NA=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDEtMjM7IjExOjAyOjMxICI7MTsyODYx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, sommap, sommad, resto" type="Integer" array="False" size=""/>
+            <declare name="rapporto" type="Real" array="False" size=""/>
+            <assign variable="sommad" expression="0"/>
+            <assign variable="sommap" expression="0"/>
+            <output expression="&quot;Inserisci un numero cha va da 5 a 100, il numero non pu&#242; essere 100.&quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="n&gt;=5 AND n&lt;100">
+                <then/>
+                <else>
+                    <output expression="&quot;Il numero inserito non rientra nel range dei numeri tra 5 e 100.&quot;" newline="True"/>
+                    <breakpoint/>
+                </else>
+            </if>
+            <for variable="i" start="n" end="100" direction="inc" step="1">
+                <assign variable="resto" expression="i mod 2"/>
+                <if expression="resto=0">
+                    <then>
+                        <assign variable="sommap" expression="sommap+i"/>
+                        <output expression="&quot;Il numero &quot; &amp; i &amp; &quot; &#232; pari.&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <assign variable="sommad" expression="sommad+i"/>
+                        <output expression="&quot;Il numero &quot; &amp; i &amp; &quot; &#232; dispari.&quot;" newline="True"/>
+                    </else>
+                </if>
+            </for>
+            <assign variable="rapporto" expression="sommap/sommad"/>
+            <output expression="&quot;La somma dei numeri pari &#232;: &quot; &amp; sommap" newline="True"/>
+            <output expression="&quot;La somma dei numeri dispari &#232;: &quot; &amp; sommad" newline="True"/>
+            <output expression="&quot;Il loro rapporto &#232;: &quot; &amp; rapporto" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

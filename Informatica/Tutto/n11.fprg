@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-05 06:49:17 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDQtMDU7IjA2OjMzOjIwICI7Mjc2Mg=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDQtMDU7IjA2OjQ5OjE3ICI7MTsyODgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I, J, K, X" type="Integer" array="False" size=""/>
+            <declare name="M, R" type="String" array="False" size=""/>
+            <declare name="A" type="String" array="True" size="5"/>
+            <for variable="X" start="0" end="5-1" direction="inc" step="1">
+                <input variable="A[X]"/>
+            </for>
+            <assign variable="R" expression="&quot;&quot;"/>
+            <assign variable="K" expression="5"/>
+            <for variable="J" start="1" end="K" direction="inc" step="1">
+                <assign variable="M" expression="A[0]"/>
+                <for variable="I" start="0" end="3" direction="inc" step="1">
+                    <if expression="A[I]&lt;M">
+                        <then>
+                            <assign variable="M" expression="A[I]"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <assign variable="R" expression="R&amp;M"/>
+                <for variable="x" start="0" end="4" direction="inc" step="1">
+                    <if expression="A[x]=&quot;M&quot;">
+                        <then>
+                            <assign variable="A[X]" expression="&quot;&quot;"/>
+                            <assign variable="X" expression="0"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

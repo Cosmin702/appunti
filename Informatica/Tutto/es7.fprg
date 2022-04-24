@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-05 05:32:27 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDQtMDU7IjA1OjIzOjIzICI7Mjc2Mw=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDQtMDU7IjA1OjMyOjI3ICI7MTsyODc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I, RES, TONDE" type="Integer" array="False" size=""/>
+            <declare name="E" type="String" array="False" size=""/>
+            <input variable="E"/>
+            <assign variable="TONDE" expression="0"/>
+            <assign variable="RES" expression="0"/>
+            <for variable="I" start="0" end="len(E)-1" direction="inc" step="1">
+                <if expression="CHAR(E,I) = &quot;(&quot;">
+                    <then>
+                        <assign variable="TONDE" expression="TONDE+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="CHAR(E,I) = &quot;)&quot;">
+                    <then>
+                        <assign variable="TONDE" expression="TONDE+1"/>
+                        <if expression="RES=0">
+                            <then>
+                                <if expression="TONDE&lt;0">
+                                    <then>
+                                        <assign variable="RES" expression="I"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="TONDE" newline="True"/>
+            <output expression="RES" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

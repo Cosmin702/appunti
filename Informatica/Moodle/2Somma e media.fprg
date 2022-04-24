@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tec_Inf_01"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-20 12:35:37 "/>
+        <attribute name="created" value="VGVjX0luZl8wMTtERVNLVE9QLThPRUk5MTQ7MjAyMS0xMi0yMDsiMTE6NTY6MzEgIjszMDU2"/>
+        <attribute name="edited" value="VGVjX0luZl8wMTtERVNLVE9QLThPRUk5MTQ7MjAyMS0xMi0yMDsiMTI6MzU6MzcgIjsxOzMxNjg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Somma, I, Nmax, N" type="Integer" array="False" size=""/>
+            <declare name="Media" type="Real" array="False" size=""/>
+            <assign variable="Somma" expression="0"/>
+            <output expression="&quot;Inserisci quanti numeri generare&quot;" newline="True"/>
+            <input variable="Nmax"/>
+            <for variable="I" start="1" end="Nmax" direction="inc" step="1">
+                <assign variable="N" expression="random(100)"/>
+                <assign variable="Somma" expression="Somma+N"/>
+                <output expression="&quot;Il numero generato &#232;: &quot; &amp; N" newline="True"/>
+            </for>
+            <assign variable="Media" expression="Somma/Nmax"/>
+            <output expression="&quot;La somma dei numeri &#232;: &quot; &amp; Somma" newline="True"/>
+            <output expression="&quot;La media totale &#232;: &quot; &amp; Media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

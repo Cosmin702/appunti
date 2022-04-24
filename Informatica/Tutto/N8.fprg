@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-15 02:23:45 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDQtMDU7IjA1OjUxOjIxICI7Mjc2Mg=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDQtMTU7IjAyOjIzOjQ1ICI7MzsyODc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="D, I, P" type="Integer" array="False" size=""/>
+            <declare name="E" type="String" array="True" size="4"/>
+            <for variable="I" start="0" end="3" direction="inc" step="1">
+                <output expression="&quot;Inaserisci la cifra n&quot; &amp; I+1" newline="True"/>
+                <input variable="E[I]"/>
+                <comment text="Questa funzione converte le lettere in numeri"/>
+                <call expression="Conversione(E,I)"/>
+            </for>
+            <assign variable="D" expression="0"/>
+            <assign variable="P" expression="4-1"/>
+            <for variable="I" start="1-1" end="4-1" direction="inc" step="1">
+                <assign variable="D" expression="D+((ToInteger(E[I]))*(16^P))"/>
+                <assign variable="P" expression="P-1"/>
+            </for>
+            <output expression="&quot;Il risultato &#233; : &quot; &amp; D" newline="True"/>
+        </body>
+    </function>
+    <function name="Conversione" type="None" variable="">
+        <parameters>
+            <parameter name="E" type="String" array="True"/>
+            <parameter name="I" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <if expression="E[I]=&quot;A&quot;">
+                <then>
+                    <assign variable="E[I]" expression="ToString(10)"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="E[I]=&quot;B&quot;">
+                <then>
+                    <assign variable="E[I]" expression="ToString(11)"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="E[I]=&quot;C&quot;">
+                <then>
+                    <assign variable="E[I]" expression="ToString(12)"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="E[I]=&quot;D&quot;">
+                <then>
+                    <assign variable="E[I]" expression="ToString(13)"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="E[I]=&quot;E&quot;">
+                <then>
+                    <assign variable="E[I]" expression="ToString(14)"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="E[I]=&quot;F&quot;">
+                <then>
+                    <assign variable="E[I]" expression="ToString(15)"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

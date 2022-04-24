@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ameli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-22 07:19:21 "/>
+        <attribute name="created" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMjI7IjAzOjIzOjA0ICI7Mjc1OA=="/>
+        <attribute name="edited" value="YW1lbGk7REVTS1RPUC1CUjVJTzFJOzIwMjItMDMtMjI7IjA3OjE5OjIxICI7NTsyODc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I, X, C, NVOLTE, Y" type="Integer" array="False" size=""/>
+            <declare name="ALFABETO, CHIAVE, CHIAVETEMP, FRASETEMP" type="String" array="False" size=""/>
+            <assign variable="ALFABETO" expression="&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;"/>
+            <assign variable="CHIAVE" expression="&quot;&quot;"/>
+            <output expression="&quot;Vuoi criptare o decriptare il messaggio? (Criptare=1 , Decriptare=0)&quot;" newline="True"/>
+            <input variable="X"/>
+            <output expression="&quot;Qual'&#233; la chiave di decriptazione?&quot;" newline="True"/>
+            <input variable="CHIAVETEMP"/>
+            <output expression="&quot;Quante volte vuoi farlo?&quot;" newline="True"/>
+            <input variable="NVOLTE"/>
+            <output expression="&quot;Inserisci la frase:&quot;" newline="True"/>
+            <input variable="FRASETEMP"/>
+            <declare name="FRASE" type="String" array="True" size="len(FRASETEMP)"/>
+            <for variable="I" start="0" end="len(CHIAVETEMP)-1" direction="inc" step="1">
+                <if expression="char(CHIAVETEMP,I) = &quot; &quot;">
+                    <then/>
+                    <else>
+                        <assign variable="CHIAVE" expression="CHIAVE &amp; char(CHIAVETEMP,I)"/>
+                    </else>
+                </if>
+            </for>
+            <for variable="I" start="0" end="len(FRASETEMP)-1" direction="inc" step="1">
+                <assign variable="FRASE[I]" expression="char(FRASETEMP,I)"/>
+            </for>
+            <for variable="Y" start="1" end="NVOLTE" direction="inc" step="1">
+                <for variable="I" start="0" end="len(FRASETEMP)-1" direction="inc" step="1">
+                    <for variable="C" start="0" end="25" direction="inc" step="1">
+                        <if expression="X=0">
+                            <then>
+                                <if expression="char(CHIAVE,C) = FRASE[I]">
+                                    <then>
+                                        <assign variable="FRASE[I]" expression="char(ALFABETO,C)"/>
+                                        <assign variable="C" expression="25"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="char(ALFABETO,C)=FRASE[I]">
+                                    <then>
+                                        <assign variable="FRASE[I]" expression="char(CHIAVE,C)"/>
+                                        <assign variable="C" expression="25"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </for>
+                </for>
+            </for>
+            <output expression="&quot;Il risultato &#233;:&quot;" newline="True"/>
+            <for variable="I" start="0" end="len(FRASETEMP)-1" direction="inc" step="1">
+                <output expression="FRASE[I]" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
