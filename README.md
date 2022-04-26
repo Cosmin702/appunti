@@ -2,17 +2,18 @@
 Una repository per tutti gli appunti possibili e immaginabili.
 
 # Apotema : Fatturare
-Grugliasco 26 aprile 2022
-Un'intera lezione
-buttato vicino
-a un compagno
-massacrato
-Con Flowgorithm
-sclerato
-e un pugno al monitor
-ho tirato
-e non sono mai stato 
-tanto incazzato
+Grugliasco 26 aprile 2022 <br/>
+
+Un'intera lezione <br/>
+buttato vicino <br/>
+a un compagno <br/>
+massacrato <br/>
+Con Flowgorithm <br/>
+sclerato <br/>
+e un pugno al monitor <br/>
+ho tirato <br/>
+e non sono mai stato <br/>
+tanto incazzato <br/>
 
 # Tutorial perché no.
 
